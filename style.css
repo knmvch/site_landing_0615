@@ -1,4 +1,10 @@
 /* Общие стили */
+@font-face {
+  font-family: 'WDXLLubrifontJPN-Regular';
+  src: url('WDXLLubrifontJPN-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'Playfair Display', serif;
@@ -14,7 +20,7 @@ header {
   padding: 60px 20px;
 }
 header h1 {
-  font-family: serif;
+  font-family: 'WDXLLubrifontJPN-Regular', serif;
   font-size: 3rem;
   color: #a80000;
   margin-bottom: 10px;

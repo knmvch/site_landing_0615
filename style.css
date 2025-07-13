@@ -14,9 +14,12 @@
 
 body {
   font-family: 'WDXL Lubrifont JP N', serif;
-  background: #fff;
+  background: pink;
   color: #333;
   line-height: 1.6;
+  position: relative;
+}
+
 }
 
 /* Видео-шапка */
@@ -68,7 +71,7 @@ body::after {
   bottom: 0;
   width: 40px;
   background: green; /* временная заливка */
-  z-index: 1;
+  z-index: 9999;
 }
 
 body::before {

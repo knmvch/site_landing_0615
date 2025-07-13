@@ -1,6 +1,6 @@
 /* Общие стили */
 @font-face {
-  font-family: 'WDXLLubrifontJPN';
+  font-family: 'WDXL Lubrifont JP N';
   src: url('WDXLLubrifontJPN-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -144,6 +144,6 @@ footer {
 
 .video-header h1 {
   font-size: 4rem;
-  font-family: 'WDXLLubrifontJPN', serif;
+  font-family: 'WDXL Lubrifont JP N', serif;
 }
 

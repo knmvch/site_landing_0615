@@ -1,0 +1,112 @@
+/* Общие стили */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'PT Serif', serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Хедер */
+header {
+  background: #f5f0e9;
+  text-align: center;
+  padding: 60px 20px;
+}
+header h1 {
+  font-family: serif;
+  font-size: 3rem;
+  color: #a80000;
+  margin-bottom: 10px;
+}
+header .tagline {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Секции */
+section {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+section h2 {
+  font-size: 2rem;
+  color: #a80000;
+  margin-bottom: 20px;
+}
+
+/* Услуги */
+.services ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.services ul li {
+  background: #f5f0e9;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Галерея и отзывы */
+.gallery, .reviews {
+  text-align: center;
+}
+.reviews blockquote {
+  background: #f5f0e9;
+  padding: 15px;
+  border-left: 5px solid #a80000;
+  margin: 20px auto;
+  max-width: 600px;
+  font-style: italic;
+}
+
+/* Форма */
+.contact form {
+  background: #f5f0e9;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+}
+.contact input,
+.contact textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact button {
+  background: #a80000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact button:hover {
+  background: #820000;
+}
+
+/* Футер */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  background: #f5f0e9;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* Адаптивность */
+@media(max-width:600px) {
+  header h1 { font-size: 2.2rem; }
+  section { margin: 40px auto; }
+  .services ul { grid-template-columns: 1fr; }
+}

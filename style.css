@@ -70,20 +70,13 @@ body {
   padding: 0 40px;
   background-color: #fff;
   background-image:
-    url('border_sides.png'),
-    url('border_sides.png');
+    url('border-sides.png'),
+    url('border-sides.png');
   background-repeat: repeat-y, repeat-y;
   background-position: left top, right top;
   background-size: 40px auto, 40px auto;
   box-sizing: border-box;
   border: 2px solid red; /* временная рамка для отладки */
-}
-
-.content-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 40px;
-  box-sizing: border-box;
 }
 
 /* Секции */

@@ -37,7 +37,7 @@ body {
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 1;
-  filter: brightness(0.6); /* затемнение видео для читаемости текста */
+  filter: brightness(0.6);
 }
 
 .video-header .overlay {
@@ -52,8 +52,9 @@ body {
 .video-header h1 {
   font-size: 4rem;
   font-family: 'WDXL Lubrifont JP N', serif;
-  color: #a80000; /* красный цвет */
+  color: #a80000;
   margin-bottom: 0.2em;
+  text-shadow: none; /* Убрана подсветка */
 }
 
 .video-header .tagline {
@@ -62,15 +63,23 @@ body {
   text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
 }
 
-/* Контент с бордюрами по бокам */
+/* Бордюры вокруг контента */
+.page-wrapper {
+  position: relative;
+  padding: 40px 0 80px;
+  background-color: #fff;
+  background-image:
+    url('border_sides.png'),
+    url('border_sides.png');
+  background-repeat: repeat-y, repeat-y;
+  background-position: left top, right top;
+  background-size: 40px auto, 40px auto;
+}
+
 .content-wrapper {
   max-width: 900px;
-  margin: 40px auto 80px;
+  margin: 0 auto;
   padding: 0 40px;
-  background:
-    url('border_sides.png') left top repeat-y,
-    url('border_sides.png') right top repeat-y;
-  background-color: #fff;
   box-sizing: border-box;
 }
 
@@ -91,8 +100,7 @@ body {
   margin-bottom: 20px;
   border-bottom: 2px solid #a80000;
   padding-bottom: 5px;
-  display: inline-block;
-  text-align: center;
+  text-align: center; /* всегда по центру */
 }
 
 /* Услуги */
@@ -176,9 +184,12 @@ footer {
   .video-header .tagline {
     font-size: 1.1rem;
   }
+  .page-wrapper {
+    padding: 20px 0 60px;
+  }
   .content-wrapper {
     padding: 0 20px;
-    margin: 20px auto 60px;
+    margin: 0 auto;
   }
   .content-wrapper section {
     margin: 40px auto;

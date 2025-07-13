@@ -1,136 +1,120 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-услуги — Лендинг</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; background: #f9f9f9; color: #333; }
+
+        header {
+            background: #0077cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-button {
+            background: #0077cc;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #005fa3;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        form input, form textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header, section, footer {
+                padding: 20px 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="ru"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Онлайн-услуги — Лендинг&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>* { margin: 0; padding: 0; box-sizing: border-box; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: Arial, sans-serif; line-height: 1.6; background: #f9f9f9; color: #333; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #0077cc;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>section {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 800px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.cta-button {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #0077cc;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: background 0.3s;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.cta-button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #005fa3;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>form {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 8px rgba(0,0,0,0.1);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>form input, form textarea {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #ccc;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #222;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 600px) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>header, section, footer {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 20px 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Название вашей онлайн-услуги&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Короткое описание / слоган&lt;/p&gt;</p>
-<p class="p1">&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;О нас&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Мы предлагаем качественные онлайн-услуги для бизнеса и частных клиентов. Работаем быстро, честно и с заботой о вас.&lt;/p&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Наши преимущества&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;✅ Адаптивный дизайн&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;✅ Быстрая загрузка&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;✅ Простая и понятная структура&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Оставить заявку&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;form id="contact-form"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" name="name" placeholder="Ваше имя" required&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="email" name="email" placeholder="Email" required&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;textarea name="message" rows="5" placeholder="Сообщение" required&gt;&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="submit" class="cta-button"&gt;Отправить&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="status-message" style="margin-top:10px;"&gt;&lt;/p&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;© 2025 Онлайн-услуги. Все права защищены.&lt;/p&gt;</p>
-<p class="p1">&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Форма с фейковой отправкой — под замену на Telegram/email</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const form = document.getElementById('contact-form');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const status = document.getElementById('status-message');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>form.addEventListener('submit', function (e) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>e.preventDefault();</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Здесь будет отправка на сервер/Telegram</p>
-<p class="p1"><span class="Apple-converted-space">        </span>status.textContent = "Заявка отправлена! Мы свяжемся с вами.";</p>
-<p class="p1"><span class="Apple-converted-space">        </span>form.reset();</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+<header>
+    <h1>Название вашей онлайн-услуги</h1>
+    <p>Короткое описание / слоган</p>
+</header>
+
+<section>
+    <h2>О нас</h2>
+    <p>Мы предлагаем качественные онлайн-услуги для бизнеса и частных клиентов. Работаем быстро, честно и с заботой о вас.</p>
+</section>
+
+<section>
+    <h2>Наши преимущества</h2>
+    <ul>
+        <li>✅ Адаптивный дизайн</li>
+        <li>✅ Быстрая загрузка</li>
+        <li>✅ Простая и понятная структура</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Оставить заявку</h2>
+    <form id="contact-form">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="5" placeholder="Сообщение" required></textarea>
+        <button type="submit" class="cta-button">Отправить</button>
+    </form>
+    <p id="status-message" style="margin-top:10px;"></p>
+</section>
+
+<footer>
+    <p>© 2025 Онлайн-услуги. Все права защищены.</p>
+</footer>
+
+<script>
+    // Форма с фейковой отправкой — под замену на Telegram/email
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('status-message');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Здесь будет отправка на сервер/Telegram
+        status.textContent = "Заявка отправлена! Мы свяжемся с вами.";
+        form.reset();
+    });
+</script>
+
 </body>
 </html>

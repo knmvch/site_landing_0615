@@ -110,3 +110,32 @@ footer {
   section { margin: 40px auto; }
   .services ul { grid-template-columns: 1fr; }
 }
+.video-header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.video-header .overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding-top: 30vh;
+}
+
+.video-header h1 {
+  font-size: 4rem;
+  font-family: 'WDXL Lubrifont JP N', serif;
+}

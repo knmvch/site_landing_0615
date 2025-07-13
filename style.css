@@ -16,10 +16,9 @@ body {
   background: #fff;
   color: #333;
   line-height: 1.6;
-  position: relative;
 }
 
-/* 🎥 Видео-шапка */
+/* Видео-шапка */
 .video-header {
   position: relative;
   height: 100vh;
@@ -35,7 +34,7 @@ body {
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 1;
-  filter: brightness(0.6); /* затемнение видео */
+  filter: brightness(0.6);
 }
 
 .video-header .overlay {
@@ -56,17 +55,17 @@ body {
 .video-header .tagline {
   font-size: 1.4rem;
   color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
 }
 
-/* 🪵 Боковые бордюры */
+/* Бордюры по краям — фиксированные под видео */
 body::before,
 body::after {
   content: '';
   position: fixed;
-  top: 100vh; /* начинаются под видео */
+  top: 100vh;    /* сразу под видео */
   bottom: 0;
-  width: 40px;
+  width: 40px;   /* ширина бордюров */
   background: url('border-sides.png') repeat-y;
   z-index: 1;
 }
@@ -79,7 +78,7 @@ body::after {
   right: 0;
 }
 
-/* 📄 Контент */
+/* Контент */
 .content-wrapper {
   max-width: 900px;
   margin: 0 auto 80px;
@@ -88,13 +87,13 @@ body::after {
   z-index: 2;
 }
 
-/* 📦 Секции */
+/* Секции */
 .content-wrapper section {
   max-width: 800px;
   margin: 60px auto;
   padding: 20px;
   background: #f5f0e9;
-  box-shadow: 0 2px 8px rgba(168, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(168,0,0,0.15);
   border-radius: 10px;
   text-align: center;
 }
@@ -105,9 +104,10 @@ body::after {
   margin-bottom: 20px;
   border-bottom: 2px solid #a80000;
   padding-bottom: 5px;
+  text-align: center;
 }
 
-/* 🧖 Услуги */
+/* Услуги */
 .services ul {
   list-style: none;
   display: grid;
@@ -122,9 +122,8 @@ body::after {
   font-size: 1.1rem;
 }
 
-/* 🖼️ Галерея и отзывы */
-.gallery,
-.reviews {
+/* Галерея и отзывы */
+.gallery, .reviews {
   text-align: center;
 }
 
@@ -137,7 +136,7 @@ body::after {
   font-style: italic;
 }
 
-/* ✉️ Форма */
+/* Форма */
 .contact form {
   background: #f5f0e9;
   padding: 20px;
@@ -171,7 +170,7 @@ body::after {
   background: #820000;
 }
 
-/* 👣 Футер */
+/* Футер */
 footer {
   text-align: center;
   padding: 30px 0;
@@ -180,24 +179,17 @@ footer {
   font-size: 0.9rem;
 }
 
-/* 📱 Адаптивность */
-@media (max-width: 600px) {
+/* Адаптивность */
+@media(max-width: 600px) {
   .video-header h1 {
     font-size: 2.8rem;
   }
-
   .video-header .tagline {
     font-size: 1.1rem;
   }
-
   .content-wrapper {
     padding: 0 20px;
   }
-
-  .content-wrapper section {
-    margin: 40px auto;
-  }
-
   .services ul {
     grid-template-columns: 1fr;
   }

@@ -64,9 +64,9 @@ body::before,
 body::after {
   content: '';
   position: fixed;
-  top: 100vh;
+  top: 100vh;    /* старт прямо под видео */
   bottom: 0;
-  width: 40px;
+  width: 40px;   /* ширина бордюра */
   background: url('border-sides.png') repeat-y;
   z-index: 1;
 }

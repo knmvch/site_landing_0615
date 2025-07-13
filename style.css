@@ -116,6 +116,7 @@ footer {
   section { margin: 40px auto; }
   .services ul { grid-template-columns: 1fr; }
 }
+/* Видео-шапка */
 .video-header {
   position: relative;
   height: 100vh;
@@ -143,5 +144,5 @@ footer {
 
 .video-header h1 {
   font-size: 4rem;
-  font-family: 'WDXL Lubrifont JP N', serif;
+  font-family: 'WDXLLubrifontJPN-Regular', serif;
 }

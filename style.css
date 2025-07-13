@@ -68,8 +68,8 @@ body {
   margin: 40px auto 80px;
   padding: 0 40px;
   background:
-    url('border_pattern.png') left top repeat-y,
-    url('border_pattern.png') right top repeat-y;
+    url('border_sides.png') left top repeat-y,
+    url('border_sides.png') right top repeat-y;
   background-color: #fff;
   box-sizing: border-box;
 }

@@ -17,8 +17,6 @@ body {
   background: #fff;
   color: #333;
   line-height: 1.6;
-  padding: 0;
-  margin: 0;
 }
 
 /* Видео-шапка */
@@ -51,10 +49,8 @@ body {
 
 .video-header h1 {
   font-size: 4rem;
-  font-family: 'WDXL Lubrifont JP N', serif;
   color: #a80000;
-  margin-bottom: 0.2em;
-  text-shadow: none; /* Убрана подсветка */
+  text-shadow: none;
 }
 
 .video-header .tagline {
@@ -63,26 +59,39 @@ body {
   text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
 }
 
-/* Бордюры вокруг контента */
+/* Бордюры по краям */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  top: 100vh;
+  bottom: 0;
+  width: 40px;
+  background: url('border_sides.png') repeat-y;
+  z-index: 1;
+}
+
+body::before {
+  left: 0;
+}
+
+body::after {
+  right: 0;
+}
+
+/* Контент */
 .content-wrapper {
   max-width: 900px;
-  margin: 40px auto 80px;
+  margin: 0 auto 80px;
   padding: 0 40px;
-  background-color: #fff;
-  background-image:
-    url('border-sides.png'),
-    url('border-sides.png');
-  background-repeat: repeat-y, repeat-y;
-  background-position: left top, right top;
-  background-size: 40px auto, 40px auto;
-  box-sizing: border-box;
-  border: 2px solid red; /* временная рамка для отладки */
+  position: relative;
+  z-index: 2;
 }
 
 /* Секции */
 .content-wrapper section {
   max-width: 800px;
-  margin: 80px auto;
+  margin: 60px auto;
   padding: 20px;
   background: #f5f0e9;
   box-shadow: 0 2px 8px rgba(168,0,0,0.15);
@@ -96,7 +105,7 @@ body {
   margin-bottom: 20px;
   border-bottom: 2px solid #a80000;
   padding-bottom: 5px;
-  text-align: center; /* всегда по центру */
+  text-align: center;
 }
 
 /* Услуги */
@@ -111,7 +120,6 @@ body {
   background: #f5f0e9;
   padding: 15px;
   border-radius: 8px;
-  text-align: center;
   font-size: 1.1rem;
 }
 
@@ -173,22 +181,15 @@ footer {
 }
 
 /* Адаптивность */
-@media(max-width:600px) {
+@media(max-width: 600px) {
   .video-header h1 {
     font-size: 2.8rem;
   }
   .video-header .tagline {
     font-size: 1.1rem;
   }
-  .page-wrapper {
-    padding: 20px 0 60px;
-  }
   .content-wrapper {
     padding: 0 20px;
-    margin: 0 auto;
-  }
-  .content-wrapper section {
-    margin: 40px auto;
   }
   .services ul {
     grid-template-columns: 1fr;

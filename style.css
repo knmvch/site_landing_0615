@@ -67,7 +67,7 @@ body::after {
   top: 100vh;
   bottom: 0;
   width: 40px;
-  background: url('border_sides.png') repeat-y;
+  background: url('border-sides.png') repeat-y;
   z-index: 1;
 }
 

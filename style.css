@@ -208,4 +208,39 @@ footer {
   .section ul li {
     justify-content: flex-start;
   }
+  /* === Микроанимации кнопок === */
+.contact button {
+  background: #730C02;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.contact button:hover {
+  background: #A80000;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* === Прикреплённая навигация === */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  z-index: 999;
+  backdrop-filter: blur(8px);
+  transition: background 0.3s ease;
+}
+
+body {
+  padding-top: 60px; /* компенсация высоты фиксированной навигации */
+}
 }

@@ -64,10 +64,10 @@ body::before,
 body::after {
   content: '';
   position: fixed;
-  top: 100vh;    /* старт прямо под видео */
+  top: 100vh;
   bottom: 0;
-  width: 40px;   /* ширина бордюра */
-  background: url('border-sides.png') repeat-y;
+  width: 40px;
+  background: green; /* временная заливка */
   z-index: 1;
 }
 

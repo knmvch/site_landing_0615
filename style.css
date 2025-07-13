@@ -14,9 +14,17 @@
 
 body {
   font-family: 'WDXL Lubrifont JP N', serif;
-  background: #fff;
+  background-color: #fffdf7;
   color: #333;
   line-height: 1.6;
+
+  /* Боковые бордюры с узором */
+  background-image: url('border-sides.png'), url('border-sides.png');
+  background-repeat: repeat-y, repeat-y;
+  background-position: left center, right center;
+  background-size: 150px auto;
+  padding-left: 160px;
+  padding-right: 160px;
 }
 
 /* Хедер без видео */
@@ -134,6 +142,13 @@ footer {
   }
   .services ul {
     grid-template-columns: 1fr;
+  }
+
+  /* Убираем отступы для узоров на узких экранах */
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: none;
   }
 }
 

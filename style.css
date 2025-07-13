@@ -14,145 +14,14 @@
 
 body {
   font-family: 'WDXL Lubrifont JP N', serif;
-  background-color: #fffdf7;
+  background: #fff url('border_pattern_left.png') left top repeat-y,
+              #fff url('border_pattern_right.png') right top repeat-y;
   color: #333;
   line-height: 1.6;
-
-  /* Боковые бордюры с узором */
-  background-image: url('border-sides.png'), url('border-sides.png');
-  background-repeat: repeat-y, repeat-y;
-  background-position: left center, right center;
-  background-size: 150px auto;
-  padding-left: 160px;
-  padding-right: 160px;
+  padding: 0 40px; /* Чтобы текст не прижимался к бордюрам */
 }
 
-/* Хедер без видео */
-header:not(.video-header) {
-  background: #f5f0e9;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-header:not(.video-header) h1 {
-  font-family: 'WDXL Lubrifont JP N', serif;
-  font-size: 3rem;
-  color: #a80000;
-  margin-bottom: 10px;
-}
-
-header:not(.video-header) .tagline {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* Секции */
-section {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
-
-section h2 {
-  font-size: 2rem;
-  color: #a80000;
-  margin-bottom: 20px;
-}
-
-/* Услуги */
-.services ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.services ul li {
-  background: #f5f0e9;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-/* Галерея и отзывы */
-.gallery, .reviews {
-  text-align: center;
-}
-
-.reviews blockquote {
-  background: #f5f0e9;
-  padding: 15px;
-  border-left: 5px solid #a80000;
-  margin: 20px auto;
-  max-width: 600px;
-  font-style: italic;
-}
-
-/* Форма */
-.contact form {
-  background: #f5f0e9;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: auto;
-}
-
-.contact input,
-.contact textarea {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.contact button {
-  background: #a80000;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.contact button:hover {
-  background: #820000;
-}
-
-/* Футер */
-footer {
-  text-align: center;
-  padding: 30px 0;
-  background: #f5f0e9;
-  color: #333;
-  font-size: 0.9rem;
-}
-
-/* Адаптивность */
-@media(max-width:600px) {
-  header:not(.video-header) h1 {
-    font-size: 2.2rem;
-  }
-  section {
-    margin: 40px auto;
-  }
-  .services ul {
-    grid-template-columns: 1fr;
-  }
-
-  /* Убираем отступы для узоров на узких экранах */
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
-    background-image: none;
-  }
-}
-
-/* Видео-шапка */
+/* Хедер видео */
 .video-header {
   position: relative;
   height: 100vh;
@@ -167,6 +36,7 @@ footer {
   min-height: 100%;
   transform: translate(-50%, -50%);
   object-fit: cover;
+  filter: brightness(0.55); /* затемнение видео для читаемости */
   z-index: 1;
 }
 
@@ -174,13 +44,151 @@ footer {
   position: relative;
   z-index: 2;
   text-align: center;
-  color: white;
+  color: #a80000; /* цвет заголовка */
   padding-top: 30vh;
   max-width: 800px;
   margin: 0 auto;
+  text-shadow: 1px 1px 4px rgba(255,255,255,0.8); /* немного подсветка текста */
 }
 
 .video-header h1 {
   font-size: 4rem;
   font-family: 'WDXL Lubrifont JP N', serif;
+  margin-bottom: 0.2em;
 }
+
+.video-header .tagline {
+  font-size: 1.4rem;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+/* Секции */
+section {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+  border-radius: 10px;
+  background: #f5f0e9;
+  box-shadow: 0 2px 8px rgba(168,0,0,0.15);
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #a80000;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #a80000;
+  padding-bottom: 5px;
+}
+
+/* Услуги */
+.services ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.services ul li {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 1px 6px rgba(168,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.services ul li:hover {
+  transform: translateY(-5px);
+}
+
+/* Галерея и отзывы */
+.gallery, .reviews {
+  text-align: center;
+}
+
+.reviews blockquote {
+  background: #fff;
+  padding: 15px;
+  border-left: 5px solid #a80000;
+  margin: 20px auto;
+  max-width: 600px;
+  font-style: italic;
+  box-shadow: 0 2px 6px rgba(168,0,0,0.15);
+}
+
+/* Форма */
+.contact form {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(168,0,0,0.15);
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.contact button {
+  background: #a80000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: inherit;
+}
+
+.contact button:hover {
+  background: #820000;
+}
+
+/* Статус отправки */
+#status {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #a80000;
+  text-align: center;
+}
+
+/* Футер */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  background: #f5f0e9;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  body {
+    padding: 0 10px;
+  }
+  .video-header h1 {
+    font-size: 2.5rem;
+  }
+  section {
+    margin: 40px auto;
+    max-width: 95%;
+  }
+  .services ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Бордюры слева и справа */
+/* Здесь предполагается, что border_pattern_left.png и border_pattern_right.png — это твои узоры */

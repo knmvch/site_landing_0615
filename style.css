@@ -226,3 +226,39 @@ footer {
   padding: 20px 0;
   font-size: 0.9rem;
 }
+/* Галерея-карусель */
+.gallery-slider .slider-container li {
+  list-style: none;
+}
+.gallery-slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Опционально: уменьшить отступы */
+.gallery-slider {
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+/* Индикаторы-точки */
+.gallery-slider .slider-indicators {
+  bottom: 10px;
+}
+
+/* Навигационные кнопки */
+.gallery-slider .slider-nav,
+.gallery-slider .slider-nav-next {
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Анимация при нависании */
+.gallery-slider .slider-nav:hover,
+.gallery-slider .slider-nav-next:hover {
+  background-color: rgba(0,0,0,0.5);
+  transition: background 0.3s;
+}
+

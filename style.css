@@ -1,4 +1,3 @@
-/* Подключение шрифта */
 @font-face {
   font-family: 'WDXL Lubrifont JP N';
   src: url('WDXLLubrifontJPN-Regular.ttf') format('truetype');
@@ -15,7 +14,6 @@ body {
   background: #fff;
   color: #0D0D0D;
   line-height: 1.6;
-  padding-top: 0;
 }
 
 a {
@@ -110,7 +108,7 @@ h2 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Разделители секций */
+/* Разделители */
 .section-separator {
   width: 100%;
   overflow: hidden;
@@ -226,36 +224,28 @@ footer {
   padding: 20px 0;
   font-size: 0.9rem;
 }
-/* Галерея-карусель */
+
+/* Галерея */
+.gallery-slider {
+  margin: 20px auto;
+  max-width: 100%;
+}
 .gallery-slider .slider-container li {
   list-style: none;
 }
 .gallery-slider img {
   width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
+  max-height: 220px;
   object-fit: cover;
+  border-radius: 8px;
 }
-
-/* Опционально: уменьшить отступы */
-.gallery-slider {
-  margin: 20px auto;
-  max-width: 100%;
-}
-
-/* Индикаторы-точки */
 .gallery-slider .slider-indicators {
   bottom: 10px;
 }
-
-/* Навигационные кнопки */
 .gallery-slider .slider-nav,
 .gallery-slider .slider-nav-next {
   background-color: rgba(0,0,0,0.3);
 }
-
-/* Анимация при нависании */
 .gallery-slider .slider-nav:hover,
 .gallery-slider .slider-nav-next:hover {
   background-color: rgba(0,0,0,0.5);

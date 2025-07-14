@@ -15,6 +15,7 @@ body {
   background: #fff;
   color: #0D0D0D;
   line-height: 1.6;
+  padding-top: 60px; /* компенсация фиксированной навигации */
 }
 a {
   color: inherit;
@@ -103,10 +104,12 @@ h2 {
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 .contact button:hover {
   background: #A80000;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Видео-шапка */
@@ -144,33 +147,40 @@ h2 {
 }
 
 /* Навигация */
-.nav {
-  position: absolute;
+.nav-container {
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+.nav {
   display: flex;
   justify-content: center;
-  background: rgba(0,0,0,0.4);
-  padding: 15px;
-  z-index: 3;
+  gap: 20px;
 }
 .nav a {
-  margin: 0 15px;
   color: #FFF;
   font-size: 1rem;
   transition: opacity 0.3s ease;
 }
 .nav a:hover {
   opacity: 0.7;
-}
-
-/* Футер */
-footer {
-  background: #730C02;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.9rem;
 }
 
 /* Разделители */
@@ -190,57 +200,59 @@ footer {
   transition-property: opacity, transform;
 }
 
-/* Мобильная адаптация */
-@media (max-width: 600px) {
-  .video-header h1 {
-    font-size: 2.5rem;
+/* Футер */
+footer {
+  background: #730C02;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* === Адаптив для мобильных устройств === */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
   }
-  .video-header .tagline {
-    font-size: 1rem;
-  }
-  section {
-    margin: 40px 20px;
-  }
+
   .nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-bottom: 10px;
   }
+
+  .nav.open {
+    max-height: 300px;
+  }
+
+  .nav a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
   .section ul li {
     justify-content: flex-start;
   }
-  /* === Микроанимации кнопок === */
-.contact button {
-  background: #730C02;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-.contact button:hover {
-  background: #A80000;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
 
-/* === Прикреплённая навигация === */
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 15px;
-  z-index: 999;
-  backdrop-filter: blur(8px);
-  transition: background 0.3s ease;
-}
+  .video-header h1 {
+    font-size: 2.5rem;
+  }
 
-body {
-  padding-top: 60px; /* компенсация высоты фиксированной навигации */
-}
+  .video-header .tagline {
+    font-size: 1rem;
+  }
+
+  section {
+    margin: 40px 20px;
+  }
 }

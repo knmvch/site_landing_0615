@@ -4,7 +4,7 @@
   src: url('WDXLLubrifontJPN-Regular.ttf') format('truetype');
 }
 
-/* Сброс и базовые стили */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -15,104 +15,71 @@ body {
   background: #fff;
   color: #0D0D0D;
   line-height: 1.6;
-  padding-top: 60px; /* компенсация фиксированной навигации */
+  padding-top: 60px;
 }
 a {
   color: inherit;
   text-decoration: none;
 }
-
-/* Секция */
-.section {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 20px;
-}
-
-/* Заголовки */
-h2 {
-  font-size: 2rem;
-  color: #730C02;
-  border-bottom: 2px solid #730C02;
-  padding-bottom: 8px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Контент секций */
-.section p,
-.section ul,
-.section blockquote {
-  font-size: 1rem;
-  color: #333;
-}
-
-/* Список услуг */
-.section ul {
+ul {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+}
+
+/* Навигация */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  padding: 12px 0;
+  transition: background 0.3s ease;
+}
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
-.section ul li {
-  background: #F2D479;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.nav-links li a {
+  color: #fff;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
 }
-.section ul li i {
-  margin-right: 8px;
-  color: #730C02;
-  font-size: 1.3rem;
+.nav-links li a:hover {
+  opacity: 0.7;
 }
 
-/* Цитаты */
-.section blockquote {
-  background: #D9D059;
-  border-left: 5px solid #730C02;
-  padding: 15px;
-  margin: 20px auto;
-  font-style: italic;
-  max-width: 600px;
+/* Бургер меню */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 20px;
 }
-
-/* Форма */
-.contact form {
+.burger span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  transition: all 0.3s;
+}
+.nav-links.active {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 600px;
-  margin: auto;
-}
-.contact input,
-.contact textarea {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-.contact button {
-  background: #730C02;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-.contact button:hover {
-  background: #A80000;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  gap: 15px;
 }
 
-/* Видео-шапка */
+/* Видео шапка */
 .video-header {
   position: relative;
   height: 100vh;
@@ -146,113 +113,193 @@ h2 {
   margin-top: 10px;
 }
 
-/* Навигация */
-.nav-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+/* Секции */
+.section {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
 }
-.burger {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 1001;
+h2 {
+  font-size: 2rem;
+  color: #730C02;
+  border-bottom: 2px solid #730C02;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  text-align: center;
 }
-.nav {
-  display: flex;
-  justify-content: center;
+.section p, .section ul, .section blockquote {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Услуги */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
   gap: 20px;
 }
-.nav a {
-  color: #FFF;
-  font-size: 1rem;
-  transition: opacity 0.3s ease;
+.service-card {
+  background: #F2D479;
+border-radius: 8px;
+padding: 15px;
+text-align: center;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+transition: transform 0.3s ease;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
-.nav a:hover {
-  opacity: 0.7;
+.service-card i {
+color: #730C02;
+font-size: 1.8rem;
+margin-bottom: 8px;
+transition: color 0.3s ease;
+}
+.service-card span {
+font-size: 1.1rem;
+font-weight: 600;
+color: #730C02;
+transition: font-size 0.3s ease;
+}
+.service-card .description {
+font-size: 0.9rem;
+color: #3a3a3a;
+max-height: 0;
+opacity: 0;
+overflow: hidden;
+transition: max-height 0.4s ease, opacity 0.4s ease;
+margin-top: 10px;
+text-align: center;
+padding: 0 5px;
 }
 
-/* Разделители */
-.section-separator {
-  width: 100vw;
-  overflow: hidden;
-  margin: 40px 0;
+/* Анимация при ховере */
+.service-card:hover,
+.service-card:focus {
+transform: scale(1.05);
+z-index: 10;
 }
-.section-separator img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
+.service-card:hover i,
+.service-card:focus i {
+color: #A80000;
+}
+.service-card:hover span,
+.service-card:focus span {
+font-size: 1.3rem;
+}
+.service-card:hover .description,
+.service-card:focus .description {
+max-height: 100px;
+opacity: 1;
 }
 
-/* Плавные переходы AOS */
-[data-aos] {
-  transition-property: opacity, transform;
+/* Цитаты */
+.section blockquote {
+background: #D9D059;
+border-left: 5px solid #730C02;
+padding: 15px;
+margin: 20px auto;
+font-style: italic;
+max-width: 600px;
+}
+
+/* Форма */
+.contact form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+max-width: 600px;
+margin: auto;
+}
+.contact input,
+.contact textarea {
+padding: 10px;
+font-size: 1rem;
+border: 1px solid #ccc;
+border-radius: 4px;
+resize: vertical;
+}
+.contact button {
+background: #730C02;
+color: white;
+padding: 12px;
+border: none;
+border-radius: 5px;
+font-size: 1rem;
+cursor: pointer;
+transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.contact button:hover {
+background: #A80000;
+transform: scale(1.05);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Футер */
 footer {
-  background: #730C02;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.9rem;
+background: #730C02;
+color: white;
+text-align: center;
+padding: 20px 0;
+font-size: 0.9rem;
 }
 
-/* === Адаптив для мобильных устройств === */
+/* Разделители */
+.section-separator {
+width: 100vw;
+overflow: hidden;
+margin: 40px 0;
+}
+.section-separator img {
+width: 100%;
+display: block;
+object-fit: cover;
+}
+
+/* Плавные переходы AOS */
+[data-aos] {
+transition-property: opacity, transform;
+}
+
+/* Мобильная адаптация */
 @media (max-width: 768px) {
-  .burger {
-    display: block;
-  }
+.nav-links {
+display: none;
+width: 100%;
+background: rgba(0,0,0,0.7);
+flex-direction: column;
+text-align: center;
+padding: 10px 0;
+}
+.nav-links.active {
+display: flex;
+}
+.burger {
+display: flex;
+}
+.nav-container {
+justify-content: space-between;
+padding: 0 15px;
+max-width: 100vw;
+}
+.nav-links li a {
+font-size: 1.2rem;
+padding: 10px 0;
+display: block;
+}
+}
 
-  .nav {
-    position: fixed;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.85);
-    flex-direction: column;
-    align-items: center;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    padding-bottom: 10px;
-  }
-
-  .nav.open {
-    max-height: 300px;
-  }
-
-  .nav a {
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-
-  .section ul li {
-    justify-content: flex-start;
-  }
-
-  .video-header h1 {
-    font-size: 2.5rem;
-  }
-
-  .video-header .tagline {
-    font-size: 1rem;
-  }
-
-  section {
-    margin: 40px 20px;
-  }
+/* Мобильные шрифты */
+@media (max-width: 600px) {
+.video-header h1 {
+font-size: 2.5rem;
+}
+.video-header .tagline {
+font-size: 1rem;
+}
+.section {
+margin: 40px 20px;
+}
 }

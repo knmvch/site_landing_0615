@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Крещение — СПА по‑русски</title>
-
   <link rel="stylesheet" href="style.css" />
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
   <link
@@ -15,13 +14,22 @@
 <body>
 
   <header class="video-header">
-    <nav class="nav" data-aos="fade-down" data-aos-duration="800">
-      <a href="#about">О нас</a><a href="#services">Услуги</a>
-      <a href="#reviews">Отзывы</a><a href="#gallery">Галерея</a>
-      <a href="#contact">Контакт</a>
-    </nav>
+    <!-- Бургер + меню -->
+    <div class="nav-container">
+      <button class="burger" aria-label="Открыть меню">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav">
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contact">Контакт</a>
+      </nav>
+    </div>
+
     <video autoplay muted loop playsinline>
-      <source src="video.mp4" type="video/mp4"/>
+      <source src="video.mp4" type="video/mp4" />
     </video>
     <div class="overlay" data-aos="zoom-in" data-aos-duration="1000">
       <h1>Крещение</h1>
@@ -30,17 +38,16 @@
   </header>
 
   <main>
-    <!-- О нас -->
+    <!-- разделители и секции -->
     <section id="about" class="section" data-aos="fade-up" data-aos-duration="800">
       <h2>О нас</h2>
-      <p>«Крещение» — место силы и отдыха в традициях Руси. Храним обряды, парим с душой и заботимся о здоровье каждого гостя.</p>
+      <p>«Крещение» — место силы и отдыха в традициях Руси...</p>
     </section>
 
     <div class="section-separator" data-aos="fade-left" data-aos-duration="600">
-      <img src="section-separator.png" alt="Разделитель секций"/>
+      <img src="section-separator.png" alt="Разделитель" />
     </div>
 
-    <!-- Наши услуги -->
     <section id="services" class="section" data-aos="fade-up" data-aos-duration="800">
       <h2>Наши услуги</h2>
       <ul>
@@ -52,10 +59,9 @@
     </section>
 
     <div class="section-separator" data-aos="fade-right" data-aos-duration="600">
-      <img src="section-separator.png" alt="Разделитель секций"/>
+      <img src="section-separator.png" alt="Разделитель" />
     </div>
 
-    <!-- Отзывы -->
     <section id="reviews" class="section" data-aos="fade-up" data-aos-duration="800">
       <h2>Отзывы</h2>
       <blockquote>«Лучшее расслабление за всё лето!»</blockquote>
@@ -63,26 +69,24 @@
     </section>
 
     <div class="section-separator" data-aos="fade-left" data-aos-duration="600">
-      <img src="section-separator.png" alt="Разделитель секций"/>
+      <img src="section-separator.png" alt="Разделитель" />
     </div>
 
-    <!-- Галерея -->
     <section id="gallery" class="section" data-aos="fade-up" data-aos-duration="800">
       <h2>Галерея</h2>
       <p>Фото скоро будут добавлены 📷</p>
     </section>
 
     <div class="section-separator" data-aos="fade-right" data-aos-duration="600">
-      <img src="section-separator.png" alt="Разделитель секций"/>
+      <img src="section-separator.png" alt="Разделитель" />
     </div>
 
-    <!-- Контакты -->
     <section id="contact" class="section" data-aos="fade-up" data-aos-duration="800">
       <h2>Контакты</h2>
       <p>Мы находимся в… (адрес)</p>
       <form id="contactForm">
-        <input type="text" name="name" placeholder="Ваше имя" required/>
-        <input type="tel" name="phone" placeholder="Телефон" required/>
+        <input type="text" name="name" placeholder="Ваше имя" required />
+        <input type="tel" name="phone" placeholder="Телефон" required />
         <textarea name="message" placeholder="Комментарий..."></textarea>
         <button type="submit">Отправить</button>
       </form>
@@ -96,6 +100,19 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({ once: true, offset: 120, easing: 'ease-out-cubic' });
+  </script>
+  <script>
+    // JS для бургер‑меню
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav');
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      burger.classList.toggle('active');
+    });
+    // Закрыть меню при клике на ссылку
+    document.querySelectorAll('.nav a').forEach(link => {
+      link.addEventListener('click', () => nav.classList.remove('open'));
+    });
   </script>
 </body>
 </html>

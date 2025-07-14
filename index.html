@@ -5,26 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Крещение — СПА по‑русски</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
-  <!-- Font Awesome для иконок -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-papb+8rK1+HUq5au1zIK+1Ld6jK0x1q/b9zOcLZkIRNFlr2kzv8fTtpkqFiN6T/61xNQv17zScq+cIjQ7ypywQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
 </head>
 <body>
 
+  <!-- Навигация -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">Крещение</div>
+      <div class="nav-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contact">Контакт</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Видео-шапка -->
   <header class="video-header">
-    <nav class="nav">
-      <a href="#about">О нас</a>
-      <a href="#services">Услуги</a>
-      <a href="#reviews">Отзывы</a>
-      <a href="#gallery">Галерея</a>
-      <a href="#contact">Контакт</a>
-    </nav>
     <video autoplay muted loop playsinline>
       <source src="video.mp4" type="video/mp4" />
     </video>
@@ -41,33 +45,33 @@
     </section>
 
     <div class="section-separator">
-      <img src="section-separator.png" alt="Разделитель" />
+      <img src="section-separator.png" alt="Декоративный разделитель" />
     </div>
 
-    <section id="services" class="section" data-aos="fade-up">
+    <section id="services" class="section services" data-aos="fade-up">
       <h2>Наши услуги</h2>
       <ul>
-        <li tabindex="0">
-          <i class="fas fa-fire"></i> Русский массаж
-          <div class="description">Глубокий массаж для расслабления и восстановления мышц.</div>
+        <li class="service-item">
+          <i class="fas fa-spa"></i> Русский массаж
+          <p class="service-desc">Глубокое расслабление с применением традиционных техник русского массажа.</p>
         </li>
-        <li tabindex="0">
+        <li class="service-item">
           <i class="fas fa-leaf"></i> Травяные обертывания
-          <div class="description">Обертывания с натуральными травами для оздоровления кожи.</div>
+          <p class="service-desc">Очищение и питание кожи натуральными травами и маслами.</p>
         </li>
-        <li tabindex="0">
-          <i class="fas fa-spa"></i> Программа «Парение»
-          <div class="description">Традиционный пар с веником для улучшения самочувствия.</div>
+        <li class="service-item">
+          <i class="fas fa-hot-tub"></i> Программа «Парение»
+          <p class="service-desc">Комплексная процедура с веником, паром и ароматерапией.</p>
         </li>
-        <li tabindex="0">
+        <li class="service-item">
           <i class="fas fa-tree"></i> Баня с берёзовым веником
-          <div class="description">Аутентичный опыт русской бани с натуральным веником.</div>
+          <p class="service-desc">Традиционное парение с берёзовыми вениками и горячим паром.</p>
         </li>
       </ul>
     </section>
 
     <div class="section-separator">
-      <img src="section-separator.png" alt="Разделитель" />
+      <img src="section-separator.png" alt="Декоративный разделитель" />
     </div>
 
     <section id="reviews" class="section" data-aos="fade-up">
@@ -77,7 +81,7 @@
     </section>
 
     <div class="section-separator">
-      <img src="section-separator.png" alt="Разделитель" />
+      <img src="section-separator.png" alt="Декоративный разделитель" />
     </div>
 
     <section id="gallery" class="section" data-aos="fade-up">
@@ -86,10 +90,10 @@
     </section>
 
     <div class="section-separator">
-      <img src="section-separator.png" alt="Разделитель" />
+      <img src="section-separator.png" alt="Декоративный разделитель" />
     </div>
 
-    <section id="contact" class="section" data-aos="fade-up contact">
+    <section id="contact" class="section contact" data-aos="fade-up">
       <h2>Контакты</h2>
       <p>Мы находимся в… (адрес)</p>
       <form id="contactForm">
@@ -108,6 +112,18 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({ once: true });
+
+    // Мобильное меню
+    document.getElementById("menuToggle").addEventListener("click", () => {
+      document.getElementById("navLinks").classList.toggle("open");
+    });
+
+    // Анимация описания услуг
+    document.querySelectorAll(".service-item").forEach(item => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
   </script>
 </body>
 </html>

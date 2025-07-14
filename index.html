@@ -5,27 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Крещение — СПА по‑русски</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+  <!-- Font Awesome для иконок -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-papb+8rK1+HUq5au1zIK+1Ld6jK0x1q/b9zOcLZkIRNFlr2kzv8fTtpkqFiN6T/61xNQv17zScq+cIjQ7ypywQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
 
-  <nav class="nav">
-    <div class="nav-container">
-      <div class="burger" id="burger">
-        <span></span><span></span><span></span>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about">О нас</a></li>
-        <li><a href="#services">Услуги</a></li>
-        <li><a href="#reviews">Отзывы</a></li>
-        <li><a href="#gallery">Галерея</a></li>
-        <li><a href="#contact">Контакт</a></li>
-      </ul>
-    </div>
-  </nav>
-
   <header class="video-header">
+    <nav class="nav">
+      <a href="#about">О нас</a>
+      <a href="#services">Услуги</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#contact">Контакт</a>
+    </nav>
     <video autoplay muted loop playsinline>
       <source src="video.mp4" type="video/mp4" />
     </video>
@@ -42,37 +41,33 @@
     </section>
 
     <div class="section-separator">
-      <img src="section-separator.png" alt="ornamental separator" />
+      <img src="section-separator.png" alt="Разделитель" />
     </div>
 
     <section id="services" class="section" data-aos="fade-up">
       <h2>Наши услуги</h2>
-      <ul class="services-list">
-        <li class="service-card">
-          <i class="fas fa-spa"></i>
-          <span>Русский массаж</span>
-          <div class="description">Массаж с элементами прогрева и растирания в парной.</div>
+      <ul>
+        <li tabindex="0">
+          <i class="fas fa-fire"></i> Русский массаж
+          <div class="description">Глубокий массаж для расслабления и восстановления мышц.</div>
         </li>
-        <li class="service-card">
-          <i class="fas fa-leaf"></i>
-          <span>Травяные обертывания</span>
-          <div class="description">Обёртывания с натуральными травами и маслами.</div>
+        <li tabindex="0">
+          <i class="fas fa-leaf"></i> Травяные обертывания
+          <div class="description">Обертывания с натуральными травами для оздоровления кожи.</div>
         </li>
-        <li class="service-card">
-          <i class="fas fa-wind"></i>
-          <span>Программа «Парение»</span>
-          <div class="description">Полный комплекс с веником и контрастами.</div>
+        <li tabindex="0">
+          <i class="fas fa-spa"></i> Программа «Парение»
+          <div class="description">Традиционный пар с веником для улучшения самочувствия.</div>
         </li>
-        <li class="service-card">
-          <i class="fas fa-tree"></i>
-          <span>Баня с берёзовым веником</span>
-          <div class="description">Классика банного ритуала для очищения и тонуса.</div>
+        <li tabindex="0">
+          <i class="fas fa-tree"></i> Баня с берёзовым веником
+          <div class="description">Аутентичный опыт русской бани с натуральным веником.</div>
         </li>
       </ul>
     </section>
 
     <div class="section-separator">
-      <img src="section-separator.png" alt="ornamental separator" />
+      <img src="section-separator.png" alt="Разделитель" />
     </div>
 
     <section id="reviews" class="section" data-aos="fade-up">
@@ -81,12 +76,20 @@
       <blockquote>«Атмосфера, будто в деревне у бабушки, но со спа!»</blockquote>
     </section>
 
+    <div class="section-separator">
+      <img src="section-separator.png" alt="Разделитель" />
+    </div>
+
     <section id="gallery" class="section" data-aos="fade-up">
       <h2>Галерея</h2>
       <p>Фото скоро будут добавлены 📷</p>
     </section>
 
-    <section id="contact" class="section contact" data-aos="fade-up">
+    <div class="section-separator">
+      <img src="section-separator.png" alt="Разделитель" />
+    </div>
+
+    <section id="contact" class="section" data-aos="fade-up contact">
       <h2>Контакты</h2>
       <p>Мы находимся в… (адрес)</p>
       <form id="contactForm">
@@ -105,14 +108,7 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({ once: true });
-
-    // Бургер-меню
-    const burger = document.getElementById("burger");
-    const navLinks = document.getElementById("nav-links");
-    burger.addEventListener("click", () => {
-      burger.classList.toggle("active");
-      navLinks.classList.toggle("active");
-    });
   </script>
 </body>
 </html>
+

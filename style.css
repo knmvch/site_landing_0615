@@ -1,4 +1,5 @@
 /* Подключение шрифта */
+/* Подключение шрифта */
 @font-face {
   font-family: 'WDXL Lubrifont JP N';
   src: url('WDXLLubrifontJPN-Regular.ttf') format('truetype');
@@ -15,7 +16,7 @@ body {
   background: #fff;
   color: #0D0D0D;
   line-height: 1.6;
-  padding-top: 70px;
+  padding-top: 0;
 }
 
 a {
@@ -118,7 +119,7 @@ h2 {
 }
 .section-separator img {
   width: 100%;
-  max-height: 60px;
+  height: 24px;
   object-fit: cover;
   display: block;
 }
@@ -128,6 +129,7 @@ h2 {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  z-index: 0;
 }
 .video-header video {
   position: absolute;
@@ -163,7 +165,7 @@ h2 {
   left: 0;
   width: 100%;
   background: rgba(0,0,0,0.4);
-  z-index: 1000;
+  z-index: 9999;
   backdrop-filter: blur(10px);
 }
 .nav-container {
@@ -209,7 +211,7 @@ h2 {
     position: absolute;
     top: 100%;
     right: 0;
-    width: 220px;
+    width: 240px;
     padding: 10px;
   }
   .nav-links.open {
@@ -217,6 +219,7 @@ h2 {
   }
 }
 
+/* Футер */
 footer {
   background: #730C02;
   color: white;
